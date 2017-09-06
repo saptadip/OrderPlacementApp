@@ -10,3 +10,5 @@ docker login -e _ -u _ --password=$HEROKU_API_KEY registry.heroku.com
 
 echo "Pushing application docker container to Heroku"
 heroku container:push web --app $HEROKU_APP_NAME
+
+echo "Deployment to Heroku end"
