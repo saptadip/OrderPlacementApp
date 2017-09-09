@@ -2,11 +2,10 @@ import pymysql
 
 
 def connection():
-    conn = pymysql.connect(host="eu-cdbr-west-01.cleardb.com",
-                           user="b23392502681a4",
-                           passwd="a421218d",
-                           db="heroku_d710c01591e6b23",
-                           connect_timeout=120,
+    conn = pymysql.connect(host="@DB_HOST",
+                           user="@DB_USER",
+                           passwd="@DB_USER_PWD",
+                           db="@DB_NAME",
                            autocommit=True)
 
     c = conn.cursor()
