@@ -27,7 +27,7 @@
           <li> Cancelled Order: {{ summary['cancelled_order'] }} </li>
           <li> Pending Order: {{ summary['pending_order'] }} </li>
           <li> Complete Order: {{ summary['complete_order'] }} </li>
-          {% py.iplot([mychart], filename='styled_pie_chart') %}
+          <p>{{ py.iplot([mychart], filename='styled_pie_chart') }}</p>
       </div>
 
       <div role="tabpanel" class="tab-pane fade" id="lnews">Latest news
