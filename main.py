@@ -30,7 +30,8 @@ def dashboard():
         summary['complete_order'] = complete_order
 
 
-        mychart = plot_summary(summary)
+#        mychart = plot_summary(summary)
+        mychart = plot_summary()
 
 
         # close database connection

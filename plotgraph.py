@@ -4,12 +4,13 @@ import plotly.graph_objs as go
 # Account initialize
 py.sign_in("get_sapta", "3KoqZgFH6CKWmkdCTho2")
 
-def plot_summary(datadict):
-    labels=[]
-    values=[]
-    for k, v in datadict.items():
-        labels+=[str(k)]
-        values+=[str(v)]
+#def plot_summary(datadict):
+def plot_summary():
+    labels=['cancelled', 'pending', 'complete']
+    values=[7, 3, 5]
+#    for k, v in datadict.items():
+#        labels+=[str(k)]
+#        values+=[str(v)]
     colors = ['#FEBFB3', '#E1396C', '#96D38C']
 
     trace = go.Pie(labels=labels, values=values,
