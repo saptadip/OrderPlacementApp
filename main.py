@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from dbconnect import connection
+from plotgraph import plot_summary
 import gc
 import os
 
@@ -29,11 +30,15 @@ def dashboard():
         summary['complete_order'] = complete_order
 
 
+        mychart = plot_summary(summary)
+
+
         # close database connection
         c.close()
         conn.close()
         gc.collect()
-        return render_template("dashboard.html", summary=summary)
+        #return render_template("dashboard.html", summary=summary)
+        return render_template("dashboard.html", mychart=mychart)
 
     except Exception as e:
         return str(e)
