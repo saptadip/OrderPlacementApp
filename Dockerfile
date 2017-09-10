@@ -12,6 +12,7 @@ RUN pip3 install -r /src/requirements.txt
 
 COPY main.py /src
 COPY dbconnect.py /src
+COPY plotgraph.py /src
 COPY static /src/static
 COPY templates /src/templates
 
